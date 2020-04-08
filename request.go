@@ -80,7 +80,10 @@ func (a *API) SendContentRequest(ep *url.URL, method string, c *Content) (*Conte
 		return nil, err
 	}
 
+        fmt.Printf("[FABI2] %s, %s", res, err)
+
 	var content Content
+
 
 	err = json.Unmarshal(res, &content)
 	if err != nil {
